@@ -23,7 +23,7 @@ export const PreviewSearchNewComponent = ({ defaultItemsPerPage = 8 }) => {
     queryResult: {
       isFetching,
       isLoading,
-      data: { suggestion: { title_context_aware: articleSuggestions = [] } = {} } = {},
+      data: { suggestion: { default_context_aware_suggester : articleSuggestions = [] } = {} } = {},
     },
   } = usePreviewSearch({
     query: (query) => {
@@ -35,7 +35,7 @@ export const PreviewSearchNewComponent = ({ defaultItemsPerPage = 8 }) => {
         .setSearchQueryHighlightPostTag(HIGHLIGHT_DATA.post);
     },
     state: {
-      suggestionsList: [{ suggestion: 'title_context_aware', max: 10 }],
+      suggestionsList: [{ suggestion: 'default_context_aware_suggester', max: 10 }],
       itemsPerPage: defaultItemsPerPage,
     },
   });
@@ -86,7 +86,7 @@ export const PreviewSearchNewComponent = ({ defaultItemsPerPage = 8 }) => {
             {articleSuggestions.length > 0 && (
               <PreviewSearchStyled.Suggestions>
                 {articleSuggestions.length > 0 && (
-                  <PreviewSearchStyled.SuggestionsGroup id="article_name_context_aware">
+                  <PreviewSearchStyled.SuggestionsGroup id="default_context_aware_suggester">
                     <SearchGroupHeadingStyled>Suggestions</SearchGroupHeadingStyled>
                     {articleSuggestions.map(({ text }) => (
                       <PreviewSearchStyled.SuggestionTrigger id={text} key={text} asChild>
@@ -136,7 +136,7 @@ export const PreviewSearchNewComponent = ({ defaultItemsPerPage = 8 }) => {
                             </ArticleCardStyled.ImageWrapper>
                             <ArticleCardStyled.Name>
                               <HighlightComponent
-                                text={getDescription(article, 'title')}
+                                text={getDescription(article, 'name')}
                                 preSeparator={HIGHLIGHT_DATA.pre}
                                 postSeparator={HIGHLIGHT_DATA.post}
                                 highlightElement={HIGHLIGHT_DATA.highlightTag}

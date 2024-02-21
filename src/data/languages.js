@@ -9,7 +9,7 @@ export default [
   },
   {
     value: 'de',
-    label: 'Deutsch',
+    label: 'German',
   },
   {
     value: 'it',

@@ -35,7 +35,7 @@ import PropTypes from 'prop-types';
 
 
 export const SearchResultsWithLayoutOptionComponent = ({
- defaultSortType = 'featured_desc',
+ defaultSortType = 'best_match',
  defaultPage = 1,
  defaultKeyphrase = '',
  defaultItemsPerPage = 24,

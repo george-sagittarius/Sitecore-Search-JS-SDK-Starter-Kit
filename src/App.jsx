@@ -52,7 +52,7 @@ function App() {
                 apiKey={DISCOVER_CONFIG.apiKey}
                 publicSuffix={true}
               >
-                <SEOWidget rfkId={'search_seo'} />
+                
                 <Header />
                 <Routes>
                   <Route path="/" element={<Home />} />

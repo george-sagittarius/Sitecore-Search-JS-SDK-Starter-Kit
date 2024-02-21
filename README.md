@@ -57,14 +57,14 @@ Information sources must be entered and processed in CEC, to populate the conten
 
 #### Suggestion Blocks
 
-Suggestions blocks must have a field named `title_context_aware` (this needs to be configured for the `preview search widget`).
+Suggestions blocks must have a field named `default_context_aware_suggester` (this needs to be configured for the `preview search widget`).
 The following picture shows a sample configuration:
 
 ![Suggestion Blocks](https://developers.sitecorecloud.io/search-sdk/suggestion-blocks.png)
 
 #### Sorting options
 
-Sorting options must include `featured_desc` and `featured_asc` criteria pre-configured. The picture shows how it should look on CEC:
+Sorting options must include `best_match` and `best_match_ascending` criteria pre-configured. The picture shows how it should look on CEC:
 
 ![Sorting options](https://developers.sitecorecloud.io/search-sdk/sorting-options.png)
 
